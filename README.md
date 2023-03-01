@@ -1,4 +1,4 @@
-### Install Kubectl
+## Install Kubectl
 
 kubectl is installable on a variety of Linux platforms, macOS and Windows. Find your preferred operating system below.
 
@@ -8,32 +8,22 @@ kubectl is installable on a variety of Linux platforms, macOS and Windows. Find 
 
 [Install kubectl on Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows)
 
-
-### Kubernetes Configuration
-
-On the Researcher's root folder, create a directory _.kube_. Copy the Kubernetes configuration file into the directory. Each Researcher should have a __separate copy__ of the configuration file. The Researcher should have _write_ access to the configuration file as it stores user defaults. 
-If you choose to locate the file at a different location than `~/.kube/config`, you must create a shell variable to point to the configuration file as follows:
-
-```
-export KUBECONFIG=<Kubernetes-config-file>
-```
-
-Test the connection by running:
-
-```
-kubectl get nodes
-```
-
-### Install Run:ai CLI 
+## Install Run:ai CLI 
 
 
 ### "Mac or Linux"
 
 Go to the Run:ai user interface. On the top right select `Researcher Command Line Interface`.
 
+<img width="1474" alt="1 Screen Shot 2023-03-01 at 11 40 57 AM" src="https://user-images.githubusercontent.com/109220448/222215643-0bb73783-c673-429c-bc70-4d1a641f3a4e.png">
+
 Select `Mac` or `Linux`. 
 
-Download directly using the button or copy the command and run it on a remote machine and run the following.
+<img width="1265" alt="Screen Shot 2023-03-01 at 11 41 44 AM" src="https://user-images.githubusercontent.com/109220448/222215765-990cc9dd-b3d2-4237-882c-fc8c74e84945.png">
+
+Copy the command and run it on a remote machine and run the following.
+
+<img width="1281" alt="Screen Shot 2023-03-01 at 11 41 26 AM" src="https://user-images.githubusercontent.com/109220448/222215935-00d9ea97-7470-4057-81b9-cbff2f2c2c40.png">
 
 ``` 
 chmod +x runai
@@ -74,5 +64,36 @@ And when using `runai submit` command add the following flag:
 
 ```
 --address 0.0.0.0
+```
+
+### Kubernetes Configuration
+
+Copy the provided Run:AI Kubernetes configuration file into your working directory. 
+
+```
+export KUBECONFIG=<Kubernetes-config-file>
+```
+Lets login to your user
+```
+runai login
+```
+Configure your project 
+```
+runai config project lhr-10
+```
+Then we can list the running jobs we have
+```
+runai list jobs
+```
+It should look similar to the image below,
+![Screen Shot 2023-03-01 at 12 28 01 PM](https://user-images.githubusercontent.com/109220448/222217802-d6cf3275-05de-4f75-b592-53a36247e88e.png)
+
+### Submit and Connect to qoda
+
+
+Now we can submit the job via the command line interface with the following comands 
+
+```
+runai submit -i robmagno/qoda:latest -g 1 --interactive
 ```
 
