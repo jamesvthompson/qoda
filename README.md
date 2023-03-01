@@ -1,9 +1,11 @@
-### First you will need to install Kubectl
+### Install Kubectl
 
 kubectl is installable on a variety of Linux platforms, macOS and Windows. Find your preferred operating system below.
 
 [Install kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux)
+
 [Install kubectl on macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos)
+
 [Install kubectl on Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows)
 
 
