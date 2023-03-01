@@ -96,4 +96,25 @@ Now we can submit the job via the command line interface with the following coma
 ```
 runai submit -i robmagno/qoda:latest -g 1 --interactive
 ```
+![Screen Shot 2023-03-01 at 12 47 56 PM](https://user-images.githubusercontent.com/109220448/222220768-b2bb0275-e76c-47ac-829b-513284a29d49.png)
 
+Now check if the job is running this may take a few minutes
+```
+runai list jobs
+```
+![Screen Shot 2023-03-01 at 12 49 12 PM](https://user-images.githubusercontent.com/109220448/222221023-ed3f91bd-42b5-4769-95b3-d299a0d01d3b.png)
+
+Now we can copy the running job name with the qoda image and bash into it
+
+```
+runai bash <job name>
+```
+![Screen Shot 2023-03-01 at 12 51 18 PM](https://user-images.githubusercontent.com/109220448/222221515-d0653171-c3f2-41ee-9cba-e1cb99ec4159.png)
+
+To exit the session you can use ctrl d to detach
+
+Now to stop the job you can run
+```
+runai delete job <job name>
+```
+![Screen Shot 2023-03-01 at 12 51 27 PM](https://user-images.githubusercontent.com/109220448/222221985-66f7ef2c-cd4f-4e89-ae69-1b437e6729b8.png)
