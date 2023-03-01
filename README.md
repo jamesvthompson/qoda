@@ -79,7 +79,7 @@ runai login
 ```
 Configure your project 
 ```
-runai config project lhr-10
+runai config project <your project>
 ```
 Then we can list the running jobs we have
 ```
@@ -89,7 +89,6 @@ It should look similar to the image below,
 ![Screen Shot 2023-03-01 at 12 28 01 PM](https://user-images.githubusercontent.com/109220448/222217802-d6cf3275-05de-4f75-b592-53a36247e88e.png)
 
 ### Submit and Connect to qoda
-
 
 Now we can submit the job via the command line interface with the following comands 
 
