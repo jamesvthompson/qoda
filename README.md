@@ -66,7 +66,7 @@ And when using `runai submit` command add the following flag:
 --address 0.0.0.0
 ```
 
-### Kubernetes Configuration
+### Kubernetes Ruin:AI CLI Configuration
 
 Copy the provided Run:AI Kubernetes configuration file into your working directory. 
 
